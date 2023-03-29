@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.0.1",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1",
+    "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "scripts": {
+    "node-server": "node server.js" , 
+    "server": "nodemon -r dotenv/config server.js dotenv_config_path=./config/.env" , 
+    "client" : "npm run client --prefix client",
+    "start" : "concurrently \"npm run node-server\" \"npm run client\""
+  },
+  "name": "vite-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
