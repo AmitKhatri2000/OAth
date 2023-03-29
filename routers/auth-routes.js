@@ -26,14 +26,14 @@ const router = require('express').Router();
     })
 
     router.get('/google/redirect' , passport.authenticate('google' , {
-        successRedirect:process.env.Client_Url,
+        successRedirect:process.env.Client_Url || "/",
         failureRedirect:"/login/failed",
     }))  
         
 
     router.get('/logout' , (req , res)=>{
         req.logout();   
-        res.redirect(process.env.Client_Url)
+        res.redirect(process.env.Client_Url || "/")
    
     })  
         
